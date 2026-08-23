@@ -40,7 +40,7 @@ public class FlightService {
                   flight.setCapacity(capacity);
 
                   System.out.print("Enter price:");
-                  int price = scanner.nextInt();
+                  float price = scanner.nextFloat();
                   scanner.nextLine();
                   flight.setPrice(price);
                   flights.add(flight);
@@ -51,15 +51,15 @@ public class FlightService {
                   }
                   break;
               case 3:
-                  System.out.print("Enter origin:");
-                  String originToSearch=scanner.next();
                   scanner.nextLine();
+                  System.out.print("Enter origin:");
+                  String originToSearch=scanner.nextLine();
                   System.out.print("Enter destination:");
-                  String destinationToSearch=scanner.next();
+                  String destinationToSearch=scanner.nextLine();
                   System.out.println();
                   int count=0;
                   for(int i=0;i<flights.size();i++){
-                      if(flights.get(i).getFlightNumber().equals(originToSearch) && flights.get(i).getDestination().equals(destinationToSearch)){
+                      if(flights.get(i).getOrigin().equals(originToSearch) && flights.get(i).getDestination().equals(destinationToSearch)){
                           System.out.println(flights.get(i).getFlightNumber()+"|"+flights.get(i).getOrigin()+"->"+flights.get(i).getDestination()+"|Rs."+flights.get(i).getPrice()+"|"+flights.get(i).getCapacity());
                           count++;
                       }
