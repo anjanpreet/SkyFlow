@@ -47,7 +47,7 @@ public class FlightService {
                   break;
               case 2:
                   for(int i=0;i<flights.size();i++){
-                      System.out.println(flights.get(i).flightNumber+"|"+flights.get(i).origin+"->"+flights.get(i).destination+"|Rs."+flights.get(i).price+"|"+flights.get(i).capacity);
+                      System.out.println(flights.get(i).getFlightNumber()+"|"+flights.get(i).getOrigin()+"->"+flights.get(i).getDestination()+"|Rs."+flights.get(i).getPrice()+"|"+flights.get(i).getCapacity());
                   }
                   break;
               case 3:
@@ -59,8 +59,8 @@ public class FlightService {
                   System.out.println();
                   int count=0;
                   for(int i=0;i<flights.size();i++){
-                      if(flights.get(i).origin.equals(originToSearch) && flights.get(i).destination.equals(destinationToSearch)){
-                          System.out.println(flights.get(i).flightNumber+"|"+flights.get(i).origin+"->"+flights.get(i).destination+"|Rs."+flights.get(i).price+"|"+flights.get(i).capacity);
+                      if(flights.get(i).getFlightNumber().equals(originToSearch) && flights.get(i).getDestination().equals(destinationToSearch)){
+                          System.out.println(flights.get(i).getFlightNumber()+"|"+flights.get(i).getOrigin()+"->"+flights.get(i).getDestination()+"|Rs."+flights.get(i).getPrice()+"|"+flights.get(i).getCapacity());
                           count++;
                       }
                   }
